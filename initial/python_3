@@ -3,6 +3,13 @@ def weak_point(matrix):
 
 
 if __name__ == '__main__':
+    print("Example:")
+    print(list(weak_point([[7, 2, 7, 2, 8],
+                            [2, 9, 4, 1, 7],
+                            [3, 8, 6, 2, 4],
+                            [2, 5, 2, 9, 1],
+                            [6, 6, 5, 4, 5]])))
+    
     #These "asserts" using only for self-checking and not necessary for auto-testing
     assert isinstance(weak_point([[1]]), (list, tuple)), "The result should be a list or a tuple"
     assert list(weak_point([[7, 2, 7, 2, 8],
@@ -18,3 +25,4 @@ if __name__ == '__main__':
     assert list(weak_point([[1, 1, 1],
                             [1, 1, 1],
                             [1, 1, 1]])) == [0, 0], "Top left"
+    print("It's all done now!")

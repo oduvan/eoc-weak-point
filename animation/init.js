@@ -85,25 +85,6 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             },
             animationTemplateName: 'animation',
 
-            tryit: function(){
-                var this_e = this;
-                $tryit = $(this_e.extSetHtmlTryIt(this_e.getTemplate('tryit')));
-
-                var tryitDataInput = $tryit.find('.tryit-content');
-                tryitDataInput.focus();
-
-                $tryit.find('.bn-check').click(function (e) {
-                    var tryitData = tryitDataInput.val();
-                    this_e.extSendToConsoleCheckiO(tryitData);
-                    e.stopPropagation();
-                    return false;
-                });
-            },
-
-            retConsole: function (ret) {
-                $tryit.find('.checkio_result').html("Your result:<br>" + ret);
-            },
-
             functions: {
                 js: 'weakPoint',
                 python: 'weak_point'
