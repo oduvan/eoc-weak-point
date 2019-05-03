@@ -1,5 +1,5 @@
 requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
-    function (extIO, $, TableComponent) {
+    function (extIO, $, ra) {
 
         function DurabilityMatrix(options) {
             options = options || {};
@@ -33,7 +33,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
 
             this.draw = function(dom, matrix, rows, cols, weak) {
                 size = padding * 2 + (matrix.length + 1) * cell;
-                paper = Raphael(dom, size, size);
+                paper = ra.Raphael(dom, size, size);
                 var mRow = Math.min.apply(Math.min, rows);
                 var mCol = Math.min.apply(Math.min, cols);
                 for (var i = 0; i < rows.length; i++) {
